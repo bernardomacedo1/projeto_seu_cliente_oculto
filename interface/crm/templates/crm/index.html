@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'crm/styles.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Bem-vindo</h1>
+                <p class="text-center">Esta é a página inicial. Você pode se <a href="{% url 'crm:registro' %}">registrar</a> ou <a href="{% url 'crm:login' %}">entrar</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

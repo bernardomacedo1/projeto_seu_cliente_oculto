@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'crm/styles.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Registro</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ registroform.non_field_errors }}
+                    <div class="form-group">
+                        {{ registroform.username.label_tag }}
+                        {{ registroform.username }}
+                        {{ registroform.username.errors }}
+                    </div>
+                    <div class="form-group">
+                        {{ registroform.email.label_tag }}
+                        {{ registroform.email }}
+                        {{ registroform.email.errors }}
+                    </div>
+                    <div class="form-group">
+                        {{ registroform.password1.label_tag }}
+                        {{ registroform.password1 }}
+                        {{ registroform.password1.errors }}
+                    </div>
+                    <div class="form-group">
+                        {{ registroform.password2.label_tag }}
+                        {{ registroform.password2 }}
+                        {{ registroform.password2.errors }}
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Registrar" class="btn btn-primary">
+                    </div>
+                </form>
+                <div class="text-center mt-3">
+                    <p>Já tem uma conta? <a href="{% url 'crm:login' %}">Entre aqui</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

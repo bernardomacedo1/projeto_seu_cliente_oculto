@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'crm/styles.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Empresas</h1>
+                <a href="{% url 'crm:logout' %}" class="btn btn-danger mb-3">Sair</a>
+
+                <ul class="list-group mb-3">
+                    {% for empresa in empresas %}
+                        <li class="list-group-item">
+                            <h3><a href="{% url 'crm:empresa_detail' empresa.id %}">{{ empresa.nome }}</a></h3>
+                            <p>{{ empresa.descricao }}</p>
+                            <p>Nota geral: {{ empresa.nota_geral }}</p>
+                            {% if empresa.avaliacoes.count == 0 %}
+                            <p>Essa empresa não foi avaliada</p>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                {% if user.is_superuser %}
+                <h2>Adicionar Empresa</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ empresaform.non_field_errors }}
+                    <div class="form-group">
+                        {{ empresaform.nome.label_tag }}
+                        {{ empresaform.nome }}
+                    </div>
+                    <div class="form-group">
+                        {{ empresaform.descricao.label_tag }}
+                        {{ empresaform.descricao }}
+                    </div>
+                    <div class="form-group">
+                        {{ empresaform.nota_geral.label_tag }}
+                        {{ empresaform.nota_geral }}
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Adicionar" class="btn btn-primary">
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
