@@ -1,5 +1,6 @@
-# Projeto django CRM
+# Projeto django (Seu Cliente Oculto)
 
+Este projeto foi criado como parte do desafio da Seu Cliente Oculto.
 Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite o cadastro, login, gerenciamento de empresas e avaliações de usuários sobre essas empresas.
 
 ## Funcionalidades
