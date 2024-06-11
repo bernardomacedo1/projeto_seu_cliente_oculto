@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Empresa(models.Model):
+    id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100)
     descricao = models.TextField(max_length=450)
     nota_geral = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(10)], default=0)
@@ -18,6 +19,7 @@ class Empresa(models.Model):
             self.save()
 
 class Avaliacao(models.Model):
+    id = models.AutoField(primary_key=True)
     empresa = models.ForeignKey(Empresa, related_name='avaliacoes', on_delete=models.CASCADE)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     nota = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)])
@@ -29,3 +31,6 @@ class Avaliacao(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         self.empresa.calcular_nota_geral()
+    class Meta:
+        verbose_name = "Avaliação"
+        verbose_name_plural = "Avaliações"

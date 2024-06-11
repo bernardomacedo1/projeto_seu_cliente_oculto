@@ -24,6 +24,10 @@
             background-color: #4CAF50; /* Verde */
             color: white;
         }
+        .logout-btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -34,10 +38,9 @@
 
                 {% if user.is_superuser %}
                     <div class="text-center mt-3">
-                        <button type="button" class="btn btn-personalizado" data-bs-toggle="modal" data-bs-target="#adicionarEmpresaModal">Adicionar Empresa</button>
+                        <button type="submit" class="btn btn-personalizado" data-bs-toggle="modal" data-bs-target="#adicionarEmpresaModal">Adicionar Empresa</button>
                     </div>
                 {% endif %}
-                
                 <div class="mt-4">
                     <ul class="list-group">
                         {% for empresa in empresas %}
@@ -54,6 +57,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-end logout-btn">
+            <a href="{% url 'logout' %}" class="btn btn-danger">Sair</a>
         </div>
     </div>
     <div class="modal fade" id="adicionarEmpresaModal" tabindex="-1" aria-labelledby="adicionarEmpresaModalLabel" aria-hidden="true">
@@ -75,7 +81,5 @@
             </div>
         </div>
     </div>
-
-
 </body>
 </html>
