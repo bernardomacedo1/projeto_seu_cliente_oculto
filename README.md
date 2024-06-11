@@ -55,29 +55,6 @@ Os templates são bastante intuitivos, mas aqui estão alguns comentários adici
 
 - `empresa_detail.html`: Essa página exibe os detalhes de uma empresa, suas avaliações e a nota geral, que é uma média arredondada. Aqui o usuário pode adicionar novas avaliações para a empresa.
 
-### Utilização
-#### Registro de Usuário
-
-- Acesse a página inicial e clique em "Registrar".
-- Preencha o formulário de registro com nome de usuário, email e senha.
-- Após o registro, você será redirecionado para a página de login.
-
-#### Login de Usuário
-
-- Acesse a página inicial e clique em "Entrar".
-- Preencha o formulário de login com seu nome de usuário e senha.
-- Após o login, você será redirecionado para o dashboard.
-
-#### Dashboard
-
-- Usuários comuns podem visualizar a lista de empresas.
-- Administradores podem adicionar novas empresas.
-
-#### Detalhes da Empresa
-
-- Clique no nome de uma empresa no dashboard para ver mais detalhes.
-- Avalie a empresa fornecendo uma nota e um comentário.
-
 ### Estrutura de Diretórios
 
 ```
