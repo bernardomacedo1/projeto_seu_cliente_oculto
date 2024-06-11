@@ -67,3 +67,12 @@ def empresa_detail(request, empresa_id):
         form = AvaliacaoForm()
     context = {'empresa': empresa, 'avaliacoes': avaliacoes, 'avaliacaoform': form}
     return render(request, 'crm/empresa_detail.html', context=context)
+
+@login_required(login_url="crm:login")
+def adicionar_empresa(request):
+    if request.method == "POST":
+        form = EmpresaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('crm:dashboard')
+    return redirect('crm:dashboard')

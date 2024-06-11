@@ -3,7 +3,7 @@ from .models import Empresa, Avaliacao
 
 @admin.register(Empresa)
 class EmpresaAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'descricao', 'nota_geral']
+    list_display = ['nome', 'descricao']
     search_fields = ['nome', 'descricao']
 
 @admin.register(Avaliacao)

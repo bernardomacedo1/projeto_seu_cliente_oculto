@@ -86,11 +86,10 @@ class LogarUsuario(AuthenticationForm):
 class EmpresaForm(forms.ModelForm):
     class Meta:
         model = Empresa
-        fields = ['nome', 'descricao', 'nota_geral']
+        fields = ['nome', 'descricao']
         widgets = {
             'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome da empresa'}),
             'descricao': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Descrição da empresa'}),
-            'nota_geral': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nota geral (0-10)', 'readonly': True}),
         }
 
 class AvaliacaoForm(forms.ModelForm):
