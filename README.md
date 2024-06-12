@@ -1,8 +1,8 @@
 # Projeto django (Seu Cliente Oculto)
 
-Este projeto foi criado como parte do desafio da Seu Cliente Oculto.
-Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite o cadastro, login, gerenciamento de empresas e avaliações de usuários sobre essas empresas.
+Este projeto foi criado como parte do desafio da Seu Cliente Oculto. Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite o cadastro, login, gerenciamento de empresas e avaliações de usuários sobre essas empresas.
 
+ - [Como Abrir o Projeto](#Como-Abrir-o-Projeto)
  - [Funcionalidades](#Funcionalidades)
  - [Tecnilogias Utilizadas](#Tecnologias-Utilizadas)
  - [Estrutura do Projeto](#Estrutura-do-Projeto)
@@ -10,8 +10,30 @@ Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Dja
     - [Views](#Views)
     - [Forms](#Forms)
     - [Templates](#Templates)
- - [Estrutura de Diretórios](#Estrutura-de-Diretórios)
- - [Como Abrir](#Como-Abrir)
+
+### Como Abrir o Projeto
+
+1. Abra o terminal `(bash)` e navegue até um diretório escolhido;
+
+2. Clonar o repositório:
+  `git clone https://github.com/bernardomacedo1/projeto_seu_cliente_oculto.git`
+
+3. Navegar até o diretório do projeto:
+  `cd projeto_seu_cliente_oculto`
+  
+4. Criar e ativar um Ambiente Virtual:
+   
+  `python -m venv venv`
+  `source venv/Scripts/activate`  # Windows
+  `source venv/bin/activate`  # macOS/Linux
+
+5. Instalar dependências
+
+  `pip install -r requirements.txt`
+
+6. Inicie o servidor do projeto (pode ser acessado através de "localhost:8000" em um navegador
+
+  `py manage.py runserver`
 
 ## Funcionalidades
 
@@ -65,45 +87,4 @@ Os templates são bastante intuitivos, mas aqui estão alguns comentários adici
 
 - `empresa_detail.html`: Essa página exibe os detalhes de uma empresa, suas avaliações e a nota geral, que é uma média arredondada. Aqui o usuário pode adicionar novas avaliações para a empresa.
 
-### Estrutura de Diretórios
-
-```
-interface/
-│
-├── crm/
-│ ├── migrations/
-│ ├── static/
-│ ├── templates/
-│ │ ├── crm/
-│ │ │ ├── index.html
-│ │ │ ├── login.html
-│ │ │ ├── registro.html
-│ │ │ ├── dashboard.html
-│ │ │ ├── empresa_detail.html
-│ ├── __init__.py
-│ ├── admin.py
-│ ├── apps.py
-│ ├── forms.py
-│ ├── models.py
-│ ├── tests.py
-│ ├── urls.py
-│ ├── validators.py
-│ ├── views.py
-│
-├── interface/
-│ ├── __init__.py
-│ ├── asgi.py
-│ ├── settings.py
-│ ├── urls.py
-│ ├── wsgi.py
-│
-├── manage.py
-```
-
-### Como Abrir
-Para abrir o projeto em sua máquina, siga os passos:
-
-1. Clonar o repositório
-   `git clone https://github.com/bernardomacedo1/projeto_seu_cliente_oculto.git`
-2. Navegue até o diretório do projeto
-
+Para qualquer dúvida, entre em contato: `bernardomcc2002@gmail.com`
