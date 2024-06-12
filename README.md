@@ -11,6 +11,7 @@ Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Dja
     - [Forms](#Forms)
     - [Templates](#Templates)
  - [Estrutura de Diretórios](#Estrutura-de-Diretórios)
+ - [Como Abrir](#Como-Abrir)
 
 ## Funcionalidades
 
@@ -98,3 +99,11 @@ interface/
 │
 ├── manage.py
 ```
+
+### Como Abrir
+Para abrir o projeto em sua máquina, siga os passos:
+
+1. Clonar o repositório
+   `git clone https://github.com/bernardomacedo1/projeto_seu_cliente_oculto.git`
+2. Navegue até o diretório do projeto
+
