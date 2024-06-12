@@ -3,6 +3,14 @@
 Este projeto foi criado como parte do desafio da Seu Cliente Oculto.
 Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite o cadastro, login, gerenciamento de empresas e avaliações de usuários sobre essas empresas.
 
+ - [Funcionalidades](#Funcionalidades)
+ - [Tecnilogias Utilizadas](#Tecnologias_Utilizadas)
+ - [Estrutura do Projeto](#Estrutura_do_Projeto)
+    - [Models](#Models)
+    - [Views](#Views)
+    - [Forms](#Forms)
+    - [Templates](#Templates)
+
 ## Funcionalidades
 
 - **Cadastro e Login de Usuários**: Sistema de autenticação para usuários se registrarem e fazerem login.
@@ -13,7 +21,6 @@ Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Dja
 
 - **Django**: Framework web para o backend.
 - **Bootstrap**: Framework CSS para estilização.
-- **HTML/CSS**: Linguagens de marcação e estilo para o frontend.
 - **SQLite**: Banco de dados usado para armazenamento de dados.
 
 # Estrutura do Projeto
