@@ -14,7 +14,7 @@ Este projeto foi criado como parte do desafio da Seu Cliente Oculto. Este é um 
 
 ### Diagrama Entidade-Relacionamento
 
-![Descrição da imagem](./images/exemplo.png)
+![](./Diagrama.png)
 
 ### Como Abrir o Projeto
 
