@@ -2,6 +2,7 @@
 
 Este projeto foi criado como parte do desafio da Seu Cliente Oculto. Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite o cadastro, login, gerenciamento de empresas e avaliações de usuários sobre essas empresas.
 
+ - [Diagrama Entidade-Relacionamento](#Diagrama-Entidade---Relacionamento)
  - [Como Abrir o Projeto](#Como-Abrir-o-Projeto)
  - [Funcionalidades](#Funcionalidades)
  - [Tecnilogias Utilizadas](#Tecnologias-Utilizadas)
@@ -10,6 +11,10 @@ Este projeto foi criado como parte do desafio da Seu Cliente Oculto. Este é um 
     - [Views](#Views)
     - [Forms](#Forms)
     - [Templates](#Templates)
+
+### Diagrama Entidade-Relacionamento
+
+![Descrição da imagem](./images/exemplo.png)
 
 ### Como Abrir o Projeto
 
