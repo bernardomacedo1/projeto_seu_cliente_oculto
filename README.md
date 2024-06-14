@@ -42,8 +42,7 @@ Este projeto foi criado como parte do desafio da Seu Cliente Oculto. Este é um 
 
 7. Criar um super usuário
 
-  Para criar um super usuário / admin, pare o servidor com as teclas CTRL + C, 
-  em seguida, digite: `py manage.py createsuperuser`
+  Para criar um super usuário / admin, pare o servidor com as teclas CTRL + C. Em seguida, digite: `py manage.py createsuperuser`. Um super usuário terá todas as permissões, facilitando a análise do projeto.
 
 ## Funcionalidades
 
